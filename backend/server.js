@@ -1,7 +1,13 @@
 const express = require("express"); // Bring in express
+const colors = require("colors");
 const dotenv = require("dotenv").config(); // Bring in dotenv
-const {errorHandler} = require("./middleware/errorMiddleware");
+const { errorHandler } = require("./middleware/errorMiddleware");
+const connectDB = require("./config/db"); 
 const PORT = process.env.PORT || 5000;
+
+// Connect to MongoDB database
+connectDB()
+
 const app = express(); // Initialize express
 
 app.use(express.json());
