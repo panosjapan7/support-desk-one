@@ -4,7 +4,7 @@ const ticketSchema = mongoose.Schema({
         user: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
-            ref: "User"
+            ref: "User",
         },
         product: {
             type: String,
@@ -15,7 +15,7 @@ const ticketSchema = mongoose.Schema({
             type: String,
             required: [true, "Please enter a description of the issue"],
         },
-        isAdmin: {
+        status: {
             type: String,
             required: true,
             status: ["new", "open", "closed"],
