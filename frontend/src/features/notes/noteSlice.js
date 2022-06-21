@@ -45,6 +45,6 @@ export const noteSlice = createSlice({
     }
 });
 
-export const {reset} = noteSlice.actions;
+export const { reset } = noteSlice.actions;
 
 export default noteSlice.reducer;
